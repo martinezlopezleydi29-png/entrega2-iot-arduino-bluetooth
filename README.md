@@ -32,13 +32,14 @@ y el rojo D10, cada uno con una resistencia de 220 ohmios.
 | status | Consultar las salidas |
 | hola | Probar el rechazo de una entrada invalida |
 
-## Enlaces por completar antes de publicar la entrega
+## Enlaces del proyecto
 
-- URL publica de este repositorio: aun no publicada.
-- URL directa del circuito final de dos LED en Mokxi: pendiente de verificar.
+- Repositorio publico: https://github.com/martinezlopezleydi29-png/entrega2-iot-arduino-bluetooth
+- Circuito final de dos LED en Mokxi: https://app.mokxi.com/p/WYKZzVkyr_cD1bT1
 
-El editor general `https://app.mokxi.com/` no identifica una copia del circuito.
-La publicacion del ZIP no crea por si sola un repositorio ni un enlace al simulador.
+Para abrir una copia desde archivo, usar el JSON de configuracion incluido.
+Acceso al circuito comprobado sin iniciar sesion, en Chrome de incognito,
+el 21 de noviembre de 2026. Se visualizaron el circuito de dos LED y el codigo.
 
 ## Evidencia y reproducibilidad
 
