@@ -43,11 +43,16 @@ el 21 de noviembre de 2026. Se visualizaron el circuito de dos LED y el codigo.
 
 ## Evidencia y reproducibilidad
 
-`evidencias/` contiene nueve capturas originales del 21/11/2026 y un CSV
-de observaciones funcionales. No son mediciones periodicas de rendimiento.
-La plantilla de corridas adicionales tiene solo encabezados: no se han
-ejecutado esas corridas ni fabricado marcas temporales. El protocolo
-propuesto esta descrito en el articulo.
+`evidencias/` contiene las nueve capturas funcionales iniciales y su CSV.
+`evidencias/corridas_repetidas/` incorpora tres corridas nuevas de nueve
+comandos: 27 respuestas coincidentes con las esperadas. Se reinicio la
+simulacion entre corridas y se programaron envios con objetivo de 5 s.
+Los 24 intervalos entre inicios de acciones estuvieron entre 4.989 y 5.010 s.
+El reloj es el del computador y la automatizacion de interfaz; no mide
+latencia de Bluetooth. El JSON conserva el texto de la interfaz observado
+en cada paso; los TXT conservan los terminales completos. Tambien hay
+CSV derivados, resumen y capturas de ambos LED encendidos y apagados.
+No se midieron CPU/RAM ni propagacion de radio fisica.
 
 `articulo/` contiene LaTeX IEEEtran y figuras incorporadas; compilar main.tex.
 Las figuras se recortaron de las capturas sin alterar estados ni respuestas.

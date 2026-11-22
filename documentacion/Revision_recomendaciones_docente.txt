@@ -10,12 +10,14 @@ CORREGIDO EN ESTA VERSION
 
 PENDIENTE ANTES DE CONSIDERAR CERRADA LA ENTREGA
 1. Incorporar los cinco correos institucionales, suministrados por el grupo.
-2. Publicar el proyecto completo en GitHub e incorporar la URL publica comprobada.
-3. Incorporar la URL directa comprobada del circuito FINAL de dos LED en Mokxi.
-   No reutilizar la URL del ejemplo anterior de un LED ni la portada del editor.
-4. Ejecutar las corridas adicionales si se pretende afirmar que ya se aplico la
-   mejora experimental. El articulo distingue claramente ese plan de las
-   pruebas funcionales realizadas. La plantilla CSV esta vacia intencionalmente.
+2. GitHub publicado y consultado sin sesion: https://github.com/martinezlopezleydi29-png/entrega2-iot-arduino-bluetooth
+   Subir esta actualizacion del README y del articulo cuando se cierre la revision.
+3. URL del circuito final proporcionada por Leydi: https://app.mokxi.com/p/WYKZzVkyr_cD1bT1
+   Acceso confirmado en captura de Chrome de incognito, sin sesion, el 21/11/2026.
+4. Se ejecutaron tres corridas adicionales de nueve comandos, con 27 respuestas
+   coincidentes. Se conservaron marcas del computador, salida del terminal y capturas.
+   El control de envio tuvo un objetivo de 5 s; no es una medicion de latencia de radio.
+   CPU/RAM del proceso del simulador no se midieron.
 
 El requisito de GitHub del docente es para las proximas entregas: un ZIP
 local o un enlace generico al editor no lo sustituyen.
