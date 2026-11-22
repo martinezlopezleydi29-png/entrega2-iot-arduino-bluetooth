@@ -1,0 +1,10 @@
+﻿evidencia,comando,respuesta,estado,fecha
+verde.png,V,Verde ON,Solo verde encendido,2026-11-21
+ambos.png,R,Rojo ON,Ambos encendidos,2026-11-21
+solo_rojo.png,v,Verde OFF,Solo rojo encendido,2026-11-21
+apagados.png,r,Rojo OFF,Ambos apagados,2026-11-21
+apagar_todo.png,A,Ambos OFF,Ambos apagados,2026-11-21
+estado.png,status,Verde OFF Rojo OFF,Ambos apagados,2026-11-21
+invalido.png,hola,Comando invalido,Ambos apagados,2026-11-21
+desconexion.png,Disconnect,the phone disconnected,Sin enlace activo,2026-11-21
+recuperacion.png,Connect y V,connected; Verde ON,Solo verde encendido,2026-11-21
