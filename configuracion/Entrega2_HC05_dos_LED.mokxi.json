@@ -1,0 +1,269 @@
+{
+  "version": 1,
+  "name": "Entrega 2 HC05 dos LED",
+  "parts": [
+    {
+      "id": "bb1",
+      "type": "breadboard-half",
+      "props": {},
+      "x": 0,
+      "y": 0,
+      "rot": 0
+    },
+    {
+      "id": "uno1",
+      "type": "uno",
+      "props": {},
+      "x": -660,
+      "y": 0,
+      "rot": 0,
+      "program": {
+        "name": "entrega2_hc05_dos_led"
+      }
+    },
+    {
+      "id": "bt1",
+      "type": "hc05",
+      "props": {
+        "baud": 1200
+      },
+      "x": 200,
+      "y": -380,
+      "rot": 0
+    },
+    {
+      "id": "r1",
+      "type": "resistor",
+      "props": {
+        "value": 220
+      },
+      "x": 400,
+      "y": 60,
+      "rot": 0
+    },
+    {
+      "id": "d1",
+      "type": "led",
+      "props": {
+        "color": "green"
+      },
+      "x": 460,
+      "y": 100,
+      "rot": 0
+    },
+    {
+      "id": "r2",
+      "type": "resistor",
+      "props": {
+        "value": 220
+      },
+      "x": 200,
+      "y": 60,
+      "rot": 0
+    },
+    {
+      "id": "d2",
+      "type": "led",
+      "props": {
+        "color": "red"
+      },
+      "x": 260,
+      "y": 100,
+      "rot": 0
+    }
+  ],
+  "wires": [
+    {
+      "id": "w1",
+      "from": "uno1:5V",
+      "to": "bb1:tp3",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": -500,
+          "y": 480
+        },
+        {
+          "x": 80,
+          "y": 480
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "from": "uno1:GNDb",
+      "to": "bb1:tn5",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": -480,
+          "y": 520
+        },
+        {
+          "x": 120,
+          "y": 520
+        }
+      ]
+    },
+    {
+      "id": "w3",
+      "from": "bt1:VCC",
+      "to": "bb1:tp10",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 260,
+          "y": -220
+        },
+        {
+          "x": 240,
+          "y": -220
+        }
+      ]
+    },
+    {
+      "id": "w4",
+      "from": "bt1:GND",
+      "to": "bb1:tn13",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 280,
+          "y": -180
+        },
+        {
+          "x": 320,
+          "y": -180
+        }
+      ]
+    },
+    {
+      "id": "w5",
+      "from": "bt1:TXD",
+      "to": "uno1:2",
+      "color": "#20b2c6",
+      "bends": [
+        {
+          "x": 300,
+          "y": -140
+        },
+        {
+          "x": -240,
+          "y": -140
+        }
+      ]
+    },
+    {
+      "id": "w6",
+      "from": "bt1:RXD",
+      "to": "uno1:3",
+      "color": "#e8a33d",
+      "bends": [
+        {
+          "x": 320,
+          "y": -200
+        },
+        {
+          "x": -260,
+          "y": -200
+        }
+      ]
+    },
+    {
+      "id": "w7",
+      "from": "bt1:STATE",
+      "to": "uno1:4",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 340,
+          "y": -220
+        },
+        {
+          "x": 360,
+          "y": -220
+        },
+        {
+          "x": 360,
+          "y": -40
+        },
+        {
+          "x": -280,
+          "y": -40
+        }
+      ]
+    },
+    {
+      "id": "w8",
+      "from": "uno1:9",
+      "to": "bb1:h20",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": -400,
+          "y": -240
+        },
+        {
+          "x": 400,
+          "y": -240
+        }
+      ]
+    },
+    {
+      "id": "w9",
+      "from": "bb1:j25",
+      "to": "bb1:tn20",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 500,
+          "y": 60
+        },
+        {
+          "x": 480,
+          "y": 60
+        }
+      ]
+    },
+    {
+      "id": "w10",
+      "from": "uno1:10",
+      "to": "bb1:h10",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": -420,
+          "y": -280
+        },
+        {
+          "x": 200,
+          "y": -280
+        }
+      ]
+    },
+    {
+      "id": "w11",
+      "from": "bb1:j15",
+      "to": "bb1:tn10",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 300,
+          "y": 60
+        },
+        {
+          "x": 280,
+          "y": 60
+        }
+      ]
+    }
+  ],
+  "projects": {
+    "uno1": {
+      "files": {
+        "sketch.ino": "// Entrega 2 de Internet de las cosas: HC-05 simulado y dos LED.\n// Adaptado del ejemplo Bluetooth lamp de Mokxi.\n// Fuente: https://mokxi.com/projects/bluetooth-lamp\n// El modelo no verifica propagacion de radio ni conexion con un telefono real.\n// HC-05 TXD -> D2; RXD <- D3; STATE -> D4.\n// Verde: D9 -> 220 ohm -> anodo; catodo -> GND.\n// Rojo: D10 -> 220 ohm -> anodo; catodo -> GND.\n// UART del modulo: 1200 baudios, 8N1. Monitor USB: 115200 baudios.\n// Enviar V, v, R, r, A o status con final CR+LF.\n\nconst int RX_PIN = 2;\nconst int TX_PIN = 3;\nconst int STATE_PIN = 4;\nconst int LED_VERDE = 9;\nconst int LED_ROJO = 10;\nconst unsigned int BIT_US = 833;\nchar line[24];\nunsigned char at = 0;\nbool overflow = false;\nbool verdeOn = false;\nbool rojoOn = false;\n\nint readByte();\nvoid writeByte(unsigned char value);\nvoid send(const char *text);\nvoid handle(const char *text);\nbool equals(const char *a, const char *b);\n\nvoid setup() {\n  pinMode(LED_VERDE, OUTPUT);\n  pinMode(LED_ROJO, OUTPUT);\n  digitalWrite(LED_VERDE, LOW);\n  digitalWrite(LED_ROJO, LOW);\n  pinMode(STATE_PIN, INPUT);\n  pinMode(RX_PIN, INPUT);\n  digitalWrite(TX_PIN, HIGH);\n  pinMode(TX_PIN, OUTPUT);\n  Serial.begin(115200);\n  Serial.println(\"HC-05 simulado a 1200 baudios. V/v, R/r, A y status.\");\n  delay(20);\n  send(\"Listo\");\n}\n\nvoid loop() {\n  if (digitalRead(RX_PIN) == LOW) {\n    int incoming = readByte();\n    if (incoming >= 0) {\n      if (incoming == '\\n' || incoming == '\\r') {\n        if (overflow) {\n          send(\"Linea demasiado larga\");\n        } else if (at > 0) {\n          line[at] = 0;\n          handle(line);\n        }\n        at = 0;\n        overflow = false;\n      } else if (at < sizeof(line) - 1) {\n        line[at++] = (char)incoming;\n      } else {\n        overflow = true;\n      }\n    }\n  }\n}\n\nint readByte() {\n  // Half a bit from the falling edge puts the next sample in the middle of\n  // bit 0.\n  delayMicroseconds(BIT_US + BIT_US / 2);\n  int value = 0;\n  for (int bit = 0; bit < 8; bit++) {\n    if (digitalRead(RX_PIN) == HIGH) {\n      value |= (1 << bit);\n    }\n    delayMicroseconds(BIT_US);\n  }\n  // The stop bit must be high. If it is not, the byte was never a byte.\n  if (digitalRead(RX_PIN) != HIGH) {\n    Serial.println(\"framing error: is the module's baud the same as ours?\");\n    return -1;\n  }\n  return value;\n}\n\nvoid writeByte(unsigned char value) {\n  digitalWrite(TX_PIN, LOW);\n  delayMicroseconds(BIT_US);\n  for (int bit = 0; bit < 8; bit++) {\n    digitalWrite(TX_PIN, (value & (1 << bit)) ? HIGH : LOW);\n    delayMicroseconds(BIT_US);\n  }\n  digitalWrite(TX_PIN, HIGH);\n  delayMicroseconds(BIT_US);\n}\n\nvoid send(const char *text) {\n  if (digitalRead(STATE_PIN) == LOW) {\n    Serial.println(\"nobody is connected; not sending\");\n    return;\n  }\n  while (*text) {\n    writeByte((unsigned char)*text++);\n  }\n  writeByte('\\n');\n}\n\nvoid handle(const char *text) {\n  Serial.print(\"Recibido: \");\n  Serial.println(text);\n  if (equals(text, \"V\")) {\n    verdeOn = true;\n    digitalWrite(LED_VERDE, HIGH);\n    send(\"Verde ON\");\n  } else if (equals(text, \"v\")) {\n    verdeOn = false;\n    digitalWrite(LED_VERDE, LOW);\n    send(\"Verde OFF\");\n  } else if (equals(text, \"R\")) {\n    rojoOn = true;\n    digitalWrite(LED_ROJO, HIGH);\n    send(\"Rojo ON\");\n  } else if (equals(text, \"r\")) {\n    rojoOn = false;\n    digitalWrite(LED_ROJO, LOW);\n    send(\"Rojo OFF\");\n  } else if (equals(text, \"A\")) {\n    verdeOn = false;\n    rojoOn = false;\n    digitalWrite(LED_VERDE, LOW);\n    digitalWrite(LED_ROJO, LOW);\n    send(\"Ambos OFF\");\n  } else if (equals(text, \"status\")) {\n    if (verdeOn && rojoOn) send(\"Verde ON Rojo ON\");\n    else if (verdeOn) send(\"Verde ON Rojo OFF\");\n    else if (rojoOn) send(\"Verde OFF Rojo ON\");\n    else send(\"Verde OFF Rojo OFF\");\n  } else {\n    send(\"Comando invalido\");\n  }\n}\n\nbool equals(const char *a, const char *b) {\n  while (*a && *b) {\n    if (*a++ != *b++) {\n      return false;\n    }\n  }\n  return *a == 0 && *b == 0;\n}\n"
+      },
+      "main": "sketch.ino"
+    }
+  }
+}
