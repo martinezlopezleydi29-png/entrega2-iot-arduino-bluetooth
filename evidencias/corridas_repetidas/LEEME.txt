@@ -1,0 +1,26 @@
+ENSAYO REPETIDO DEL CIRCUITO FINAL
+
+Fecha local: 21/11/2026. Zona America/Bogota (UTC-05).
+Las marcas UTC del JSON corresponden al 22/11, equivalente a la noche del 21/11 en Colombia.
+Instrumento: automatizacion de la interfaz del navegador y reloj del computador.
+Proyecto: https://app.mokxi.com/p/WYKZzVkyr_cD1bT1
+
+Tres corridas, reiniciando con Stop y Run entre ellas y limpiando el terminal.
+Secuencia en cada corrida: V, R, v, r, V, R, A, status, hola.
+Se mantuvo el codigo, circuito, navegador y UART HC-05 a 1200 baudios, CR+LF.
+No se modifico ni guardo codigo nuevo durante las pruebas.
+
+Cada envio se programo respecto a un origen de tiempo, con objetivo de 5 s.
+envio_inicio_utc: instante antes de invocar la accion Send de la interfaz.
+envio_fin_utc: final de esa accion, incluyendo el tiempo de la herramienta.
+observacion_utc: instante de lectura del terminal tras una espera de 1 s
+posterior al retorno de la accion Send.
+Las diferencias entre estos tiempos NO representan latencia Bluetooth.
+Los intervalos comparan envio_inicio_utc, dentro de cada corrida, nunca entre corridas.
+
+registros_originales.json conserva la salida acumulada de la interfaz en cada paso.
+corridaN_terminal.txt conserva el texto final de cada corrida.
+Las capturas paso2 muestran ambos LED encendidos y las paso7 ambos apagados.
+resultados_27_comandos.csv y resumen.json se derivan de esos registros.
+Los datos muestran 27 respuestas coincidentes. No generalizan confiabilidad,
+alcance, interferencias ni seguridad de una radio fisica. No se midio CPU/RAM.

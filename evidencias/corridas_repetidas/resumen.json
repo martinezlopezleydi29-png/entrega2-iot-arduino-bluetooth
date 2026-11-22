@@ -1,0 +1,16 @@
+{
+  "corridas": 3,
+  "comandos_por_corrida": 9,
+  "total_comandos": 27,
+  "respuestas_coincidentes": 27,
+  "intervalos_comparados": 24,
+  "intervalo_objetivo_s": 5,
+  "intervalo_min_s": 4.989,
+  "intervalo_max_s": 5.01,
+  "intervalo_media_s": 5.000708333333334,
+  "intervalo_desviacion_muestral_s": 0.005698811215978496,
+  "fecha_local": "2026-11-21",
+  "zona": "America/Bogota",
+  "instrumento": "automatizacion de interfaz de navegador y reloj del computador",
+  "limitacion": "Tiempos de inicio de acciones de envio; no son latencias de radio ni tiempos del microcontrolador."
+}

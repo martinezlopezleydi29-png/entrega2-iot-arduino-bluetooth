@@ -1,0 +1,272 @@
+[
+  {
+    "corrida": 1,
+    "orden": 1,
+    "comando": "V",
+    "esperada": "Verde ON",
+    "envio_inicio_utc": "2026-11-22T02:08:31.243Z",
+    "envio_fin_utc": "2026-11-22T02:08:34.412Z",
+    "observacion_utc": "2026-11-22T02:08:35.471Z",
+    "terminal": "PHONEV\nBOARDVerde ON"
+  },
+  {
+    "corrida": 1,
+    "orden": 2,
+    "comando": "R",
+    "esperada": "Rojo ON",
+    "envio_inicio_utc": "2026-11-22T02:08:36.245Z",
+    "envio_fin_utc": "2026-11-22T02:08:39.393Z",
+    "observacion_utc": "2026-11-22T02:08:40.415Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON"
+  },
+  {
+    "corrida": 1,
+    "orden": 3,
+    "comando": "v",
+    "esperada": "Verde OFF",
+    "envio_inicio_utc": "2026-11-22T02:08:41.240Z",
+    "envio_fin_utc": "2026-11-22T02:08:44.387Z",
+    "observacion_utc": "2026-11-22T02:08:45.421Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF"
+  },
+  {
+    "corrida": 1,
+    "orden": 4,
+    "comando": "r",
+    "esperada": "Rojo OFF",
+    "envio_inicio_utc": "2026-11-22T02:08:46.247Z",
+    "envio_fin_utc": "2026-11-22T02:08:49.378Z",
+    "observacion_utc": "2026-11-22T02:08:50.410Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF"
+  },
+  {
+    "corrida": 1,
+    "orden": 5,
+    "comando": "V",
+    "esperada": "Verde ON",
+    "envio_inicio_utc": "2026-11-22T02:08:51.237Z",
+    "envio_fin_utc": "2026-11-22T02:08:54.380Z",
+    "observacion_utc": "2026-11-22T02:08:55.411Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON"
+  },
+  {
+    "corrida": 1,
+    "orden": 6,
+    "comando": "R",
+    "esperada": "Rojo ON",
+    "envio_inicio_utc": "2026-11-22T02:08:56.238Z",
+    "envio_fin_utc": "2026-11-22T02:08:59.394Z",
+    "observacion_utc": "2026-11-22T02:09:00.420Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON"
+  },
+  {
+    "corrida": 1,
+    "orden": 7,
+    "comando": "A",
+    "esperada": "Ambos OFF",
+    "envio_inicio_utc": "2026-11-22T02:09:01.243Z",
+    "envio_fin_utc": "2026-11-22T02:09:04.357Z",
+    "observacion_utc": "2026-11-22T02:09:05.390Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEA\nBOARDAmbos OFF"
+  },
+  {
+    "corrida": 1,
+    "orden": 8,
+    "comando": "status",
+    "esperada": "Verde OFF Rojo OFF",
+    "envio_inicio_utc": "2026-11-22T02:09:06.249Z",
+    "envio_fin_utc": "2026-11-22T02:09:09.404Z",
+    "observacion_utc": "2026-11-22T02:09:10.438Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEA\nBOARDAmbos OFF\nPHONEstatus\nBOARDVerde OFF Rojo OFF"
+  },
+  {
+    "corrida": 1,
+    "orden": 9,
+    "comando": "hola",
+    "esperada": "Comando invalido",
+    "envio_inicio_utc": "2026-11-22T02:09:11.238Z",
+    "envio_fin_utc": "2026-11-22T02:09:14.402Z",
+    "observacion_utc": "2026-11-22T02:09:15.417Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEA\nBOARDAmbos OFF\nPHONEstatus\nBOARDVerde OFF Rojo OFF\nPHONEhola\nBOARDComando invalido"
+  },
+  {
+    "corrida": 2,
+    "orden": 1,
+    "comando": "V",
+    "esperada": "Verde ON",
+    "envio_inicio_utc": "2026-11-22T02:09:48.596Z",
+    "envio_fin_utc": "2026-11-22T02:09:51.795Z",
+    "observacion_utc": "2026-11-22T02:09:52.819Z",
+    "terminal": "PHONEV\nBOARDVerde ON"
+  },
+  {
+    "corrida": 2,
+    "orden": 2,
+    "comando": "R",
+    "esperada": "Rojo ON",
+    "envio_inicio_utc": "2026-11-22T02:09:53.599Z",
+    "envio_fin_utc": "2026-11-22T02:09:56.748Z",
+    "observacion_utc": "2026-11-22T02:09:57.764Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON"
+  },
+  {
+    "corrida": 2,
+    "orden": 3,
+    "comando": "v",
+    "esperada": "Verde OFF",
+    "envio_inicio_utc": "2026-11-22T02:09:58.602Z",
+    "envio_fin_utc": "2026-11-22T02:10:01.746Z",
+    "observacion_utc": "2026-11-22T02:10:02.785Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF"
+  },
+  {
+    "corrida": 2,
+    "orden": 4,
+    "comando": "r",
+    "esperada": "Rojo OFF",
+    "envio_inicio_utc": "2026-11-22T02:10:03.604Z",
+    "envio_fin_utc": "2026-11-22T02:10:06.790Z",
+    "observacion_utc": "2026-11-22T02:10:07.817Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF"
+  },
+  {
+    "corrida": 2,
+    "orden": 5,
+    "comando": "V",
+    "esperada": "Verde ON",
+    "envio_inicio_utc": "2026-11-22T02:10:08.598Z",
+    "envio_fin_utc": "2026-11-22T02:10:11.750Z",
+    "observacion_utc": "2026-11-22T02:10:12.802Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON"
+  },
+  {
+    "corrida": 2,
+    "orden": 6,
+    "comando": "R",
+    "esperada": "Rojo ON",
+    "envio_inicio_utc": "2026-11-22T02:10:13.608Z",
+    "envio_fin_utc": "2026-11-22T02:10:16.721Z",
+    "observacion_utc": "2026-11-22T02:10:17.751Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON"
+  },
+  {
+    "corrida": 2,
+    "orden": 7,
+    "comando": "A",
+    "esperada": "Ambos OFF",
+    "envio_inicio_utc": "2026-11-22T02:10:18.603Z",
+    "envio_fin_utc": "2026-11-22T02:10:21.755Z",
+    "observacion_utc": "2026-11-22T02:10:22.785Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEA\nBOARDAmbos OFF"
+  },
+  {
+    "corrida": 2,
+    "orden": 8,
+    "comando": "status",
+    "esperada": "Verde OFF Rojo OFF",
+    "envio_inicio_utc": "2026-11-22T02:10:23.609Z",
+    "envio_fin_utc": "2026-11-22T02:10:26.730Z",
+    "observacion_utc": "2026-11-22T02:10:27.763Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEA\nBOARDAmbos OFF\nPHONEstatus\nBOARDVerde OFF Rojo OFF"
+  },
+  {
+    "corrida": 2,
+    "orden": 9,
+    "comando": "hola",
+    "esperada": "Comando invalido",
+    "envio_inicio_utc": "2026-11-22T02:10:28.609Z",
+    "envio_fin_utc": "2026-11-22T02:10:31.771Z",
+    "observacion_utc": "2026-11-22T02:10:32.795Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEA\nBOARDAmbos OFF\nPHONEstatus\nBOARDVerde OFF Rojo OFF\nPHONEhola\nBOARDComando invalido"
+  },
+  {
+    "corrida": 3,
+    "orden": 1,
+    "comando": "V",
+    "esperada": "Verde ON",
+    "envio_inicio_utc": "2026-11-22T02:11:01.334Z",
+    "envio_fin_utc": "2026-11-22T02:11:04.481Z",
+    "observacion_utc": "2026-11-22T02:11:05.513Z",
+    "terminal": "PHONEV\nBOARDVerde ON"
+  },
+  {
+    "corrida": 3,
+    "orden": 2,
+    "comando": "R",
+    "esperada": "Rojo ON",
+    "envio_inicio_utc": "2026-11-22T02:11:06.334Z",
+    "envio_fin_utc": "2026-11-22T02:11:09.468Z",
+    "observacion_utc": "2026-11-22T02:11:10.503Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON"
+  },
+  {
+    "corrida": 3,
+    "orden": 3,
+    "comando": "v",
+    "esperada": "Verde OFF",
+    "envio_inicio_utc": "2026-11-22T02:11:11.328Z",
+    "envio_fin_utc": "2026-11-22T02:11:14.460Z",
+    "observacion_utc": "2026-11-22T02:11:15.486Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF"
+  },
+  {
+    "corrida": 3,
+    "orden": 4,
+    "comando": "r",
+    "esperada": "Rojo OFF",
+    "envio_inicio_utc": "2026-11-22T02:11:16.330Z",
+    "envio_fin_utc": "2026-11-22T02:11:19.479Z",
+    "observacion_utc": "2026-11-22T02:11:20.518Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF"
+  },
+  {
+    "corrida": 3,
+    "orden": 5,
+    "comando": "V",
+    "esperada": "Verde ON",
+    "envio_inicio_utc": "2026-11-22T02:11:21.338Z",
+    "envio_fin_utc": "2026-11-22T02:11:24.481Z",
+    "observacion_utc": "2026-11-22T02:11:25.512Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON"
+  },
+  {
+    "corrida": 3,
+    "orden": 6,
+    "comando": "R",
+    "esperada": "Rojo ON",
+    "envio_inicio_utc": "2026-11-22T02:11:26.335Z",
+    "envio_fin_utc": "2026-11-22T02:11:29.440Z",
+    "observacion_utc": "2026-11-22T02:11:30.463Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON"
+  },
+  {
+    "corrida": 3,
+    "orden": 7,
+    "comando": "A",
+    "esperada": "Ambos OFF",
+    "envio_inicio_utc": "2026-11-22T02:11:31.334Z",
+    "envio_fin_utc": "2026-11-22T02:11:34.464Z",
+    "observacion_utc": "2026-11-22T02:11:35.514Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEA\nBOARDAmbos OFF"
+  },
+  {
+    "corrida": 3,
+    "orden": 8,
+    "comando": "status",
+    "esperada": "Verde OFF Rojo OFF",
+    "envio_inicio_utc": "2026-11-22T02:11:36.335Z",
+    "envio_fin_utc": "2026-11-22T02:11:39.475Z",
+    "observacion_utc": "2026-11-22T02:11:40.527Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEA\nBOARDAmbos OFF\nPHONEstatus\nBOARDVerde OFF Rojo OFF"
+  },
+  {
+    "corrida": 3,
+    "orden": 9,
+    "comando": "hola",
+    "esperada": "Comando invalido",
+    "envio_inicio_utc": "2026-11-22T02:11:41.343Z",
+    "envio_fin_utc": "2026-11-22T02:11:44.439Z",
+    "observacion_utc": "2026-11-22T02:11:45.457Z",
+    "terminal": "PHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEv\nBOARDVerde OFF\nPHONEr\nBOARDRojo OFF\nPHONEV\nBOARDVerde ON\nPHONER\nBOARDRojo ON\nPHONEA\nBOARDAmbos OFF\nPHONEstatus\nBOARDVerde OFF Rojo OFF\nPHONEhola\nBOARDComando invalido"
+  }
+]
