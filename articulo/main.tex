@@ -22,13 +22,13 @@ Entrega 2 --- Pruebas realizadas el 21 de noviembre de 2026}}
 \maketitle
 \raggedbottom
 \begin{abstract}
-Se implementó y probó en Mokxi un circuito con Arduino UNO, un modelo del módulo HC-05 y dos LED con resistencias de 220 ohmios. Se adaptó el ejemplo Bluetooth lamp para controlar por separado las salidas verde y roja mediante comandos de texto. La comunicación con el módulo se configuró a 1200 baudios y el monitor serial de Arduino a 115200 baudios. Se documentaron el encendido y apagado individual, el apagado conjunto, la consulta del estado, el manejo de un comando inválido y la desconexión y recuperación del enlace simulado. Las capturas muestran respuestas coherentes con los estados observados de las salidas. El trabajo verifica la interfaz serial del modelo y el comportamiento del programa; no constituye una medición de la propagación, interferencia o seguridad de una conexión Bluetooth física.
+Se implementó y probó en Mokxi un circuito con Arduino UNO, un modelo del módulo HC-05 y dos LED con resistencias de 220 ohmios. Se adaptó el ejemplo Bluetooth lamp para controlar por separado las salidas verde y roja mediante comandos de texto. La comunicación con el módulo se configuró a 1200 baudios y el monitor serial de Arduino a 115200 baudios. Se documentaron el encendido y apagado individual, el apagado conjunto, la consulta del estado, el manejo de un comando inválido y la desconexión y recuperación del enlace simulado. Además, se ejecutaron tres corridas de nueve comandos cada una, con una cadencia objetivo de cinco segundos. Las 27 respuestas registradas coincidieron con las esperadas. Las capturas muestran respuestas coherentes con los estados observados de las salidas. El trabajo verifica la interfaz serial del modelo y el comportamiento del programa; no constituye una medición de la propagación, interferencia o seguridad de una conexión Bluetooth física.
 \end{abstract}
 \begin{IEEEkeywords}
 Arduino UNO, HC-05, UART, comunicación serial, simulación, LED.
 \end{IEEEkeywords}
 
-\noindent\textbf{Abstract---}\textit{A circuit comprising an Arduino UNO, a simulated HC-05 module, and two LEDs with 220-ohm resistors was implemented and tested in Mokxi. The Bluetooth lamp example was adapted to control green and red outputs independently through text commands. The module interface operated at 1200 baud, while the Arduino serial monitor was initialized at 115200 baud. Tests covered individual switching, simultaneous shutdown, state reporting, invalid input, disconnection, and reconnection. Screenshots show replies consistent with the observed output states. The experiment validates the model's serial interface and program behavior, without measuring physical Bluetooth propagation, interference, or security.}
+\noindent\textbf{Abstract---}\textit{A circuit comprising an Arduino UNO, a simulated HC-05 module, and two LEDs with 220-ohm resistors was implemented and tested in Mokxi. The Bluetooth lamp example was adapted to control green and red outputs independently through text commands. The module interface operated at 1200 baud, while the Arduino serial monitor was initialized at 115200 baud. Tests covered individual switching, simultaneous shutdown, state reporting, invalid input, disconnection, and reconnection. Three additional runs of nine commands each were performed with a nominal five-second cadence; all 27 recorded replies matched expectations. Screenshots show replies consistent with the observed output states. The experiment validates the model's serial interface and program behavior, without measuring physical Bluetooth propagation, interference, or security.}
 
 \noindent\textbf{Index Terms---}Arduino UNO, HC-05, UART, serial communication, simulation, LED.
 
@@ -144,14 +144,32 @@ Los comandos individuales permitieron modificar una salida conservando la otra. 
 
 La desconexión dejó el dispositivo emparejado en la interfaz, pero sin un enlace activo: se mostró \textit{Connect first} en el campo de envío. Al pulsar \textit{Connect} y transmitir \texttt{V}, se recibió nuevamente \texttt{Verde ON}. Esto acredita recuperación funcional del enlace lógico dentro del simulador.
 
-No se midieron retardos entre el envío y la respuesta, pérdida de paquetes ni tasa máxima de comandos. Las capturas son observaciones funcionales y no una prueba estadística de confiabilidad. El montaje anterior de Wokwi registraba intervalos entre comandos mediante \texttt{millis()}; esos intervalos no equivalen a latencia Bluetooth y no se reutilizan como mediciones del circuito final.
+No se midieron retardos de radio, pérdida de paquetes físicos ni tasa máxima de comandos. Las capturas iniciales son observaciones funcionales; la repetición controlada se presenta por separado a continuación. El montaje anterior de Wokwi registraba intervalos entre comandos mediante \texttt{millis()}; esos intervalos no equivalen a latencia Bluetooth y no se reutilizan como mediciones del circuito final.
 
 \subsection{Repetición y control experimental}
-Las nueve evidencias corresponden a una secuencia manual de verificación funcional. No son nueve corridas independientes ni un muestreo periódico. No se registraron intervalos uniformes, una distribución de latencias o indicadores del proceso del simulador; por tanto, no se calculan medias, desviaciones ni porcentajes de confiabilidad a partir de esas capturas.
+Se amplió la verificación mediante tres corridas de nueve comandos: V, R, v, r, V, R, A, status y hola. Se utilizó automatización de la interfaz del navegador para programar el envío con un objetivo de cinco segundos entre acciones. Entre corridas se reinició la simulación mediante Stop y Run y se limpió el terminal. Se mantuvieron el circuito, el programa, el navegador, la UART de 1200 baudios y la terminación CR+LF.
 
-Para ampliar el experimento se propone realizar tres corridas desde un reinicio, con el mismo equipo, navegador y archivo nativo. En cada corrida se enviaría cinco veces la secuencia V, R, v, r, V, R, A, status y hola, con una cadencia fijada previamente de cinco segundos entre envíos y espera de la respuesta antes del siguiente. Esto produciría 45 envíos por corrida y 135 en total. Debe anotarse el intervalo real observado, cualquier desviación de la cadencia y los casos sin respuesta; el número de envíos propuesto no representa datos ya obtenidos.
+Los registros originales conservan el número de corrida, el orden, el comando, las marcas temporales del computador y la salida acumulada del terminal. Las marcas se guardaron en UTC; corresponden a la noche del 21 de noviembre de 2026 en Colombia (UTC-05). La respuesta se leyó después de esperar un segundo desde el retorno de la acción de envío. Este procedimiento comprueba si la respuesta está disponible en esa observación; no mide su instante exacto de llegada.
 
-El registro debe conservar corrida, secuencia, comando, marca temporal de envío, marca de respuesta, estado esperado, estado observado e incidencias. Si se monitorea el computador, se debe identificar el proceso de la pestaña del simulador, registrar su identificador y muestrear CPU y memoria a intervalos constantes. Los totales de Windows no aíslan el consumo del simulador. Este seguimiento sería un experimento adicional: no se incorporan resultados de CPU o RAM sin mediciones originales.
+\begin{table}[htbp]
+\caption{Resumen de las corridas repetidas}
+\label{tab:corridas}
+\centering\footnotesize
+\begin{tabularx}{\columnwidth}{@{}lYY@{}}
+\toprule
+Corrida & Comandos enviados & Respuestas coincidentes \\
+\midrule
+1 & 9 & 9 \\
+2 & 9 & 9 \\
+3 & 9 & 9 \\
+Total & 27 & 27 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Se compararon 24 intervalos dentro de las corridas, excluyendo las pausas entre ellas. Los inicios de las acciones de envío estuvieron separados entre 4,989 y 5,010 segundos; la media fue 5,001 segundos y la desviación estándar muestral fue 0,006 segundos. Estas cifras describen la cadencia del control de la interfaz, no el reloj del Arduino ni la latencia Bluetooth. La duración de una llamada a la herramienta de automatización tampoco representa tiempo de transmisión.
+
+Las 27 respuestas coincidieron con lo esperado, incluida la respuesta Comando invalido al texto hola. En cada corrida se conservaron capturas tras el segundo comando, con ambos LED encendidos, y tras A, con ambos apagados. Los JSON, CSV, terminales completos y capturas se incluyen en la carpeta de evidencias. El tamaño del ensayo no permite inferir una confiabilidad general ni sustituye una evaluación de radio física. No se midieron recursos CPU/RAM del proceso del simulador.
 
 \section{Alcance y limitaciones}
 La evidencia demuestra el control de dos salidas, el intercambio de comandos y respuestas por el HC-05 modelado y el manejo de una desconexión desde la interfaz. El diálogo de PIN y las indicaciones \textit{Paired} y \textit{Connected} corresponden a estados de la aplicación. No se conectó un teléfono físico ni se verificó una pila de radio real.
@@ -161,7 +179,7 @@ La diferencia con el diagrama de referencia se documenta mediante la asignación
 \section{Conclusiones}
 El montaje simulado permitió controlar de forma independiente dos LED y apagarlos conjuntamente. Las respuestas de los comandos probados coincidieron con los estados visibles de las salidas. La consulta del estado y el rechazo del texto inválido hicieron explícita la interacción entre el terminal y el programa.
 
-La separación entre la UART del módulo a 1200 baudios y el puerto de diagnóstico a 115200 baudios evita confundir configuraciones de canales distintos. La desconexión y posterior respuesta al comando de encendido mostraron recuperación del enlace lógico simulado.
+La separación entre la UART del módulo a 1200 baudios y el puerto de diagnóstico a 115200 baudios evita confundir configuraciones de canales distintos. La desconexión y posterior respuesta al comando de encendido mostraron recuperación del enlace lógico simulado. Las tres corridas adicionales registraron 27 respuestas de 27 esperadas con una cadencia objetivo de cinco segundos, acotada por los tiempos del control de la interfaz.
 
 El archivo nativo conserva el circuito completo y el programa adaptado. La exportación para Wokwi excluye el HC-05, según el README de esa exportación, por lo que no se utiliza como archivo reproducible principal. El ejemplo de Mokxi se reconoce como fuente del montaje de partida y de las rutinas UART. Como trabajo posterior queda contrastar el comportamiento con hardware y medir desempeño bajo un protocolo experimental específico.
 
