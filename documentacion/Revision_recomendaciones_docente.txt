@@ -1,0 +1,28 @@
+REVISION FRENTE A LAS RECOMENDACIONES DE JESUS ANTONIO FIGUEROA GUERRERO
+
+CORREGIDO EN ESTA VERSION
+- Fundamentacion: dos publicaciones cientificas, citadas y comparadas con el montaje.
+- Palabras clave en espanol e Index Terms en ingles.
+- Nombre completo del docente.
+- Reconocimiento del ejemplo de Mokxi y descripcion de la adaptacion.
+- Separacion entre observaciones reales y un protocolo propuesto de repeticion.
+- Capturas completas, resultados cualitativos originales, codigo y configuracion.
+
+PENDIENTE ANTES DE CONSIDERAR CERRADA LA ENTREGA
+1. Incorporar los cinco correos institucionales, suministrados por el grupo.
+2. Publicar el proyecto completo en GitHub e incorporar la URL publica comprobada.
+3. Incorporar la URL directa comprobada del circuito FINAL de dos LED en Mokxi.
+   No reutilizar la URL del ejemplo anterior de un LED ni la portada del editor.
+4. Ejecutar las corridas adicionales si se pretende afirmar que ya se aplico la
+   mejora experimental. El articulo distingue claramente ese plan de las
+   pruebas funcionales realizadas. La plantilla CSV esta vacia intencionalmente.
+
+El requisito de GitHub del docente es para las proximas entregas: un ZIP
+local o un enlace generico al editor no lo sustituyen.
+La guia de la entrega 2 no convierte el monitoreo de CPU/RAM de la entrega 1
+en un resultado obligatorio de esta practica; si se repite debe medirse el
+proceso asociado al simulador y conservar las observaciones originales.
+
+ALCANCE TECNICO
+Las pruebas son del modelo UART/HC-05 y sus controles de interfaz. No se
+midieron radio fisica, alcance, interferencias, latencias ni seguridad real.
